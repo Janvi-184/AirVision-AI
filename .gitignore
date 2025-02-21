@@ -3,3 +3,4 @@
 *.json
 *.docx
 Untitled*.ipynb
+.env
