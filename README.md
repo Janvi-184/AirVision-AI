@@ -1,6 +1,4 @@
 # AirVision AI
-
-![AirVision AI] 
 *A machine learning-powered air quality prediction system with real-time AQI monitoring.*
 
 ## 📌 Overview
