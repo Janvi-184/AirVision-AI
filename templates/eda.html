@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EDA Insights</title>
+</head>
+<body>
+    <h1>EDA Insights</h1>
+    <img src="{{ url_for('static', filename='eda_graphs/aqi_over_time.png') }}" alt="EDA Visualization 1">
+    <img src="{{ url_for('static', filename='eda_graphs/monthly_pm25_boxplot.png') }}" alt="EDA Visualization 2">
+    <img src="{{ url_for('static', filename='eda_graphs/pm25_by_dayofweek.png') }}" alt="EDA Visualization 3">
+    <img src="{{ url_for('static', filename='eda_graphs/pm25_by_hour.png') }}" alt="EDA Visualization 4">
+    <img src="{{ url_for('static', filename='eda_graphs/pm25_distribution.png') }}" alt="EDA Visualization 5">
+    <img src="{{ url_for('static', filename='eda_graphs/pm25_heatmap.png') }}" alt="EDA Visualization 6">
+    <img src="{{ url_for('static', filename='eda_graphs/pm25_vs_aqi_scatter.png') }}" alt="EDA Visualization 7">
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EDA Insights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EDA Insights</h1>
+    <div class="image-container">
+        <div class="image-box">
+            <h2>AQI Over Time</h2>
+            <img src="{{ url_for('static', filename='eda_graphs/aqi_over_time.png') }}" alt="AQI Over Time">
+        </div>
+        <div class="image-box">
+            <h2>Monthly PM2.5 Boxplot</h2>
+            <img src="{{ url_for('static', filename='eda_graphs/monthly_pm25_boxplot.png') }}" alt="Monthly PM2.5 Boxplot">
+        </div>
+        <div class="image-box">
+            <h2>PM2.5 by Day of the Week</h2>
+            <img src="{{ url_for('static', filename='eda_graphs/pm25_by_dayofweek.png') }}" alt="PM2.5 by Day of the Week">
+        </div>
+        <div class="image-box">
+            <h2>PM2.5 by Hour</h2>
+            <img src="{{ url_for('static', filename='eda_graphs/pm25_by_hour.png') }}" alt="PM2.5 by Hour">
+        </div>
+        <div class="image-box">
+            <h2>PM2.5 Distribution</h2>
+            <img src="{{ url_for('static', filename='eda_graphs/pm25_distribution.png') }}" alt="PM2.5 Distribution">
+        </div>
+        <div class="image-box">
+            <h2>PM2.5 Heatmap</h2>
+            <img src="{{ url_for('static', filename='eda_graphs/pm25_heatmap.png') }}" alt="PM2.5 Heatmap">
+        </div>
+        <div class="image-box">
+            <h2>PM2.5 vs AQI Scatter Plot</h2>
+            <img src="{{ url_for('static', filename='eda_graphs/pm25_vs_aqi_scatter.png') }}" alt="PM2.5 vs AQI Scatter Plot">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | AirVision AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .hero img {
+            width: 70%; /* Reduced image size */
+            max-width: 500px; /* Ensures it doesn’t get too large */
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            background-color: #3498db;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to AirVision AI</h1>
+        <p><strong>Monitor, analyze, and predict air quality effortlessly.</strong></p>
+        <p>AirVision AI is an advanced air quality monitoring and prediction platform that leverages real-time AQI data and machine learning models to provide accurate forecasts. Our interactive dashboards and visual analytics help users understand pollution trends, assess environmental impact, and make informed decisions for a healthier lifestyle.</p>
+        
+        <!-- Air Quality Image -->
+        <div class="hero">
+            <img src="{{ url_for('static', filename='visualizations/aqi_home_page.jpg') }}" alt="Air Quality Visualization">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="/predict">Predict AQI</a>
+            <a href="/performance">Model Performance</a>
+            <a href="/eda">EDA Insights</a>
+            <a href="/live-aqi">Live AQI Data</a>
+        </nav>
+    </div>
+</body>
+</html>

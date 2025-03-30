@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Live AQI Data</title>
+</head>
+<body>
+    <h1>Live AQI Data</h1>
+    <form method="post">
+        <select name="city">
+            {% for city in cities %}
+                <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Get AQI</button>
+    </form>
+    {% if result %}
+        <h2>AQI in {{ result.city }} :: {{ result.aqi }}</h2>
+    {% endif %}
+</body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live AQI Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .aqi-box {
+            display: inline-block;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: white;
+        }
+        .good { background-color: #00e400; }       /* Green */
+        .moderate { background-color: #ffff00; }   /* Yellow */
+        .unhealthy-sensitive { background-color: #ff7e00; } /* Orange */
+        .unhealthy { background-color: #ff0000; }  /* Red */
+        .very-unhealthy { background-color: #8f3f97; } /* Purple */
+        .hazardous { background-color: #7e0023; }  /* Maroon */
+    </style>
+</head>
+<body>
+    <h1>Live AQI Data</h1>
+    <form method="post">
+        <select name="city">
+            {% for city in cities %}
+                <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Get AQI</button>
+    </form>
+
+    {% if result %}
+        <h2>AQI in {{ result.city }}</h2>
+        <div class="aqi-box {% if result.aqi <= 50 %}good
+                             {% elif result.aqi <= 100 %}moderate
+                             {% elif result.aqi <= 150 %}unhealthy-sensitive
+                             {% elif result.aqi <= 200 %}unhealthy
+                             {% elif result.aqi <= 300 %}very-unhealthy
+                             {% else %}hazardous{% endif %}">
+            {{ result.aqi }}
+        </div>
+    {% endif %}
+</body>
+</html>

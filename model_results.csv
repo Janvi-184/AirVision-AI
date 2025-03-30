@@ -1,0 +1,9 @@
+Model,RMSE,MAE,R² Score
+Linear Regression,50.7,36.01,0.622
+Decision Tree,48.76,33.56,0.557
+Lasso Regression,50.93,36.2,0.618
+Ridge Regression,51.01,36.41,0.617
+Elastic Net Regression,50.93,36.2,0.618
+Random Forest Regressor,48.44,31.32,0.655
+XGBoost Regressor,48.6,31.68,0.652
+KNN Regressor,52.07,37.65,0.6

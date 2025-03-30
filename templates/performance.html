@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Model Performance</title>
+</head>
+<body>
+    <h1>Model Performance</h1>
+    <img src="{{ url_for('static', filename='visualizations/performance_matrix.png') }}" alt="Performance Matrix of All the Models">
+    <img src="{{ url_for('static', filename='visualizations/rmse_comparison.png') }}" alt="RMSE Comparison">
+    <img src="{{ url_for('static', filename='visualizations/mae_comparison.png') }}" alt="MAE Comparison">
+    <img src="{{ url_for('static', filename='visualizations/r2_comparison.png') }}" alt="R² Score Comparison">
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Model Performance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-container {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        h2 {
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Model Performance</h1>
+    <div class="container">
+
+        <div class="image-container">
+            <h2>Project Workflow Overview</h2>
+            <img src="{{ url_for('static', filename='visualizations/air_vision_flow.drawio.png') }}" alt="Project Workflow">
+        </div>
+
+        <div class="image-container">
+            <h2>Performance Matrix</h2>
+            <img src="{{ url_for('static', filename='visualizations/performance_matrix.png') }}" alt="Performance Matrix">
+        </div>
+        <div class="image-container">
+            <h2>RMSE Comparison</h2>
+            <img src="{{ url_for('static', filename='visualizations/rmse_comparison.png') }}" alt="RMSE Comparison">
+        </div>
+        <div class="image-container">
+            <h2>MAE Comparison</h2>
+            <img src="{{ url_for('static', filename='visualizations/mae_comparison.png') }}" alt="MAE Comparison">
+        </div>
+        <div class="image-container">
+            <h2>R² Score Comparison</h2>
+            <img src="{{ url_for('static', filename='visualizations/r2_comparison.png') }}" alt="R² Score Comparison">
+        </div>
+    </div>
+</body>
+</html>
