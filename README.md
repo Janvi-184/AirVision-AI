@@ -1,6 +1,7 @@
 # AirVision AI
 *A machine learning-powered air quality prediction system with real-time AQI monitoring.*
 
+
 ## 📌 Overview
 AirVision AI is an advanced air quality prediction system that leverages machine learning models to forecast AQI (Air Quality Index). The project includes:
 - Real-time AQI data integration
